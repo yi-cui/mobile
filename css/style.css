@@ -1,0 +1,219 @@
+body{
+	margin:1%;
+	padding:1%;
+	font-size:150%;
+	font-family: 'Poppins', sans-serif;
+}
+
+p, h1, h2 {
+    padding: 15px;
+	text-align: center;
+}
+
+h1{
+	font-size: 2em; 
+	font-weight: 600;
+	text-align: center;
+}
+
+h2{
+	font-size: 1.2em; 
+	font-weight: 600;
+	text-align: center;
+}
+
+h3{
+	font-weight: 500;
+}
+
+a{
+	color: grey;
+	text-decoration: none;
+}
+
+nav ul{
+	display: flex;
+	flex-direction: column ;
+	align-items: center;
+	gap: 2rem;
+	margin: 1rem;
+	font-size: 0.8em;
+}
+
+nav li:first-child{
+	margin-right: auto;
+	display: block;
+	font-size: 1.2em;
+	font-weight: 600;
+	border-bottom: 6px solid rgb(255, 169, 58);
+	padding-bottom: -12px;
+}
+
+header .current {
+	color: black;
+	text-decoration: underline;
+	font-weight: 600;
+}
+
+nav ul li,#nav_checkbox{
+	display: none;
+	font-size: 20px;
+} 
+
+.nav_toggle{
+	position: absolute;
+	right: 0;
+	width: 40px;
+	margin: 0rem 1rem;
+}
+
+
+#close{
+	display: none;
+	width: 80%;
+}
+
+
+#nav_checkbox:checked ~ ul li{
+	display: block;
+}
+
+#nav_checkbox:checked ~ label img#close{
+	display: block;
+}
+#nav_checkbox:checked ~ label img#menu{
+	display: none;
+}
+
+
+
+main img{
+	display: block;
+    margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	border: solid 1px white;
+	border-radius: 10px;
+	width: 85%;
+	align-self: center;
+} 
+
+
+.project p{
+	padding-left: 35px;
+	text-align: left;
+}
+
+.videos-intro{
+	border: solid 1px white;
+	border-radius: 10px;
+}
+
+.weight{
+	display: grid;
+	grid-template-columns: 2fr 5fr 2fr;
+	grid-template-rows: repeat(2,auto);
+	align-items: center;
+	row-gap: 40px;
+}
+
+.weight img{
+	margin: 0;
+	width: 100%;
+}
+
+.image-food{
+	grid-column: 1/span 3;
+	grid-row: 1 /span 1;
+}
+
+.food{
+	grid-column: 2/span 1;
+	grid-row: 1/span 1;
+	color: white;
+}
+
+.image-sleepone{
+	width: 100%;
+	grid-column: 1/span 1;
+	grid-row: 2 /span 1;
+}
+.image-sleeptwo{
+	width: 100%;
+	grid-column: 2/span 1;
+	grid-row: 2 /span 1;
+}
+
+.image-sleepthree{
+	grid-column: 3/span 1;
+	grid-row: 2 /span 1;
+}
+
+
+
+.sleep{
+	grid-column: 2/span 1;
+	grid-row: 2/span 1;
+	color: white;
+}
+
+.image-ugly{
+	grid-column: 1/span 3;
+	grid-row: 3 /span 1;
+}
+
+
+.ugly{
+	grid-column: 2/span 1;
+	grid-row: 3/span 1;
+	color: white;
+}
+
+.image-enchanting{
+	grid-column: 1/span 3;
+	grid-row: 4 /span 1;
+}
+
+
+.enchanting{
+	grid-column: 2/span 1;
+	grid-row: 4/span 1;
+	color: black;
+	padding-top: 180px;
+}
+
+.image-thinker{
+	grid-column: 1/span 3;
+	grid-row: 5 /span 1;
+}
+
+
+.thinker{
+	grid-column: 2/span 1;
+	grid-row: 5/span 1;
+	color: white;
+	padding-top: 240px;
+}
+
+.image-look{
+	grid-column: 1/span 3;
+	grid-row: 6 /span 1;
+}
+
+.look{
+	grid-column: 2/span 1;
+	grid-row: 6/span 1;
+	color: white;
+	padding-top: 240px;
+}
+
+
+footer{
+	margin-top: 50px;
+	font-size: 0.8em;
+	text-align: center;
+}
+
+
+/*Added this so the links stay the same color*/
+
