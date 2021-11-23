@@ -1,8 +1,10 @@
 body{
 	margin:1%;
 	padding:1%;
-	font-size:150%;
+	font-size:120%;
 	font-family: 'Poppins', sans-serif;
+	background-color: black;
+	color: white;
 }
 
 p, h1, h2 {
@@ -24,6 +26,9 @@ h2{
 
 h3{
 	font-weight: 500;
+}
+p{
+	font-weight: 300;
 }
 
 a{
@@ -50,7 +55,7 @@ nav li:first-child{
 }
 
 header .current {
-	color: black;
+	color: white;
 	text-decoration: underline;
 	font-weight: 600;
 }
@@ -92,7 +97,6 @@ main img{
     margin-left: auto;
 	margin-right: auto;
 	margin-top: 20px;
-	border: solid 1px white;
 	border-radius: 10px;
 	width: 85%;
 	align-self: center;
@@ -109,104 +113,19 @@ main img{
 	border-radius: 10px;
 }
 
-.weight{
+.picture{
 	display: grid;
-	grid-template-columns: 2fr 5fr 2fr;
+	grid-template-columns: 1fr;
 	grid-template-rows: repeat(2,auto);
 	align-items: center;
 	row-gap: 40px;
 }
 
-.weight img{
-	margin: 0;
-	width: 100%;
+
+
+.form{
+	background-color: white;
 }
-
-.image-food{
-	grid-column: 1/span 3;
-	grid-row: 1 /span 1;
-}
-
-.food{
-	grid-column: 2/span 1;
-	grid-row: 1/span 1;
-	color: white;
-}
-
-.image-sleepone{
-	width: 100%;
-	grid-column: 1/span 1;
-	grid-row: 2 /span 1;
-}
-.image-sleeptwo{
-	width: 100%;
-	grid-column: 2/span 1;
-	grid-row: 2 /span 1;
-}
-
-.image-sleepthree{
-	grid-column: 3/span 1;
-	grid-row: 2 /span 1;
-}
-
-
-
-.sleep{
-	grid-column: 2/span 1;
-	grid-row: 2/span 1;
-	color: white;
-}
-
-.image-ugly{
-	grid-column: 1/span 3;
-	grid-row: 3 /span 1;
-}
-
-
-.ugly{
-	grid-column: 2/span 1;
-	grid-row: 3/span 1;
-	color: white;
-}
-
-.image-enchanting{
-	grid-column: 1/span 3;
-	grid-row: 4 /span 1;
-}
-
-
-.enchanting{
-	grid-column: 2/span 1;
-	grid-row: 4/span 1;
-	color: black;
-	padding-top: 180px;
-}
-
-.image-thinker{
-	grid-column: 1/span 3;
-	grid-row: 5 /span 1;
-}
-
-
-.thinker{
-	grid-column: 2/span 1;
-	grid-row: 5/span 1;
-	color: white;
-	padding-top: 240px;
-}
-
-.image-look{
-	grid-column: 1/span 3;
-	grid-row: 6 /span 1;
-}
-
-.look{
-	grid-column: 2/span 1;
-	grid-row: 6/span 1;
-	color: white;
-	padding-top: 240px;
-}
-
 
 footer{
 	margin-top: 50px;
@@ -214,6 +133,224 @@ footer{
 	text-align: center;
 }
 
+form{
+	margin: 20px;
+}
+form p{
+	text-align: left;
+	font-weight: 300;
+	
+}
+
+input {
+	padding: 12px 20px;
+	display: inline-block;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: "Poppins";
+	font-size: 0.8em;
+}
+
+input[type=submit]:hover {
+	opacity: 0.8;
+  }
+
 
 /*Added this so the links stay the same color*/
+
+@media screen and (min-width: 850px){
+	body{
+		margin-left:10%;
+		margin-right:10%;
+		font-size:120%;
+		background-color: black;
+		color:white;
+	}
+	nav ul{
+		display: flex;
+		flex-direction: row ;
+		align-items: center;
+		gap: 2rem;
+		margin: 1rem;
+		font-size:1 em;
+	}
+
+	nav ul li{
+		display: block;
+		font-size: 1em;
+	} 
+	#nav_checkbox, .nav_toggle{
+		display: none;
+		font-size: 20px;
+	} 
+
+	
+
+	.title{
+		margin: 30px 0px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 2rem;
+		grid-template-rows: auto;
+		justify-items: start;
+	}
+	#hey{
+		grid-column: 1/ span 1;
+		grid-row: 1 / span 1;
+		align-items: flex-start;
+		background-color: #ff5e69;
+		background-size: 80%;
+		background-image: -webkit-linear-gradient(45deg,#b16cea, #ff5e69, #ff8a56,#ffa84b);
+  		-webkit-background-clip: text;
+  		-webkit-text-fill-color: transparent;
+	}
+
+	#name{
+		grid-column: 1/ span 1;
+		grid-row: 2 / span 1;
+	}
+	#intro{
+		grid-column: 2/ span 1;
+		grid-row: 1 / span 2;
+		justify-items: center;
+		align-items: center;
+	}
+
+
+	.project{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto;
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+
+	#polaris{
+		grid-column: 1/ span 1;
+		grid-row: 1 / span 1;
+	} 
+	#va{
+		grid-column: 2 / span 1;
+		grid-row: 1 / span 1;
+	}
+	#simon{
+		grid-column: 1/ span 1;
+		grid-row: 2 / span 1;
+	}
+	
+	
+	input {
+		padding: 12px 20px;
+		box-sizing: border-box;
+		font-family: "Poppins";
+		font-size: 0.8em;
+	}
+	
+	#name_id{
+		width: 30%;
+	}
+	
+	#email_id{
+		width: 60%;
+	}
+	
+	input[type=submit] {
+		width: 100%;
+		margin: 8px 0;
+		display: inline-block;
+	}
+	
+	input[type=submit]:hover {
+		opacity: 0.8;
+	  }
+	
+	
+
+
+
+
+/* The about me page */
+	.aboutme{
+		display: grid;
+		margin: 50px 0px;
+		grid-template-columns:1fr 1fr ;
+		grid-template-rows:auto;
+
+	}
+
+
+	#introduce{
+		grid-area: 2/3/1/2;
+		align-self: center;
+	}
+	.aboutme a{
+		color:white;
+		text-decoration: underline;
+	}
+
+/* The Pet page */
+
+	.petintro{
+		display: grid;
+		margin: 50px 0px;
+		grid-template-columns:1fr 1.5fr ;
+		grid-template-rows:auto;
+		column-gap: 10%;
+	}
+
+	.picture{
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+    	justify-content: center;
+	}
+	
+	.picture img{
+		margin: 10px;
+		width: 300px;
+	}
+	
+	
+	.cook{
+		margin: 50px 0px;
+		display: grid;
+		grid-template-columns: 1fr 1.2fr;
+		grid-template-rows: auto;
+		align-items: center;
+		column-gap: 10%;
+	}
+
+	.cook img{
+		width: 22%;
+	}
+	.cook img:hover{
+		width: 30%;
+	}
+
+
+	.dishes{
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+	.travel{
+		margin: 100px 0px;
+		display: grid;
+		grid-template-columns: 1.2fr 1fr;
+		grid-template-rows: auto;
+		align-items: center;
+		column-gap: 10%;
+	}
+
+	.travel img{
+		width: 30%;
+	}
+
+
+	.cities{
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+}
 
