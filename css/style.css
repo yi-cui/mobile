@@ -139,21 +139,30 @@ form{
 form p{
 	text-align: left;
 	font-weight: 300;
-	
 }
 
-input {
-	padding: 12px 20px;
+label{
 	display: inline-block;
+  }
+
+fieldset{
+	width: 95%;
+	margin: auto;
+}
+input {
 	width: 100%;
-	box-sizing: border-box;
+	padding: 12px 30px;
+	display: inline-block;
 	font-family: "Poppins";
-	font-size: 0.8em;
+	font-weight: 300;
+	font-size: 0.75em;
 }
 
 input[type=submit]:hover {
 	opacity: 0.8;
   }
+
+
 
 
 /*Added this so the links stay the same color*/
@@ -239,31 +248,28 @@ input[type=submit]:hover {
 	}
 	
 	
+	
+	
+	label{
+		display: inline-block;
+		width:15%;
+	}
+
 	input {
+		width: 84%;
 		padding: 12px 20px;
+		margin: 10px 0;
+		display: inline-block;
 		box-sizing: border-box;
-		font-family: "Poppins";
-		font-size: 0.8em;
 	}
-	
-	#name_id{
-		width: 30%;
-	}
-	
-	#email_id{
-		width: 60%;
-	}
-	
+
 	input[type=submit] {
 		width: 100%;
-		margin: 8px 0;
-		display: inline-block;
 	}
-	
+
 	input[type=submit]:hover {
 		opacity: 0.8;
-	  }
-	
+	}
 	
 
 
@@ -351,6 +357,8 @@ input[type=submit]:hover {
 		display: flex;
 		flex-flow: row wrap;
 	}
+
+	
 
 }
 
