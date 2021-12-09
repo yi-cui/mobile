@@ -32,6 +32,8 @@ a.skip:focus{
     text-decoration-style: solid;
 }
 
+
+
 p{
 	padding: 10px 0px;
 }
@@ -127,10 +129,12 @@ nav ul li,#nav_checkbox{
 
 
 
-.cook img, .travel img{
+.cook img, .travel img, .project img{
 	animation-duration:5s;
 	animation-name: fadein;
 }
+
+
 
 @keyframes fadein {
 	from {
@@ -332,6 +336,7 @@ input[type=submit]:hover {
 		text-align: center;
 		margin: auto;
 	}
+	
 
 	.flip-card{
 		width: 100%;
@@ -355,8 +360,10 @@ input[type=submit]:hover {
 		backface-visibility: hidden;
 	}
 	
-	.flip-card:hover .card {
+	.flip-card:hover .card,
+	.project a:focus .card {
 		transform: rotateY(180deg);
+
 	}
 	
 	.front, .back {
