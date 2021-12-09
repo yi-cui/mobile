@@ -1,11 +1,19 @@
 body{
-	margin:1%;
-	padding:1%;
+	margin:2%;
+	padding:2%;
 	font-size:120%;
 	font-family: 'Poppins', sans-serif;
 	background-color: black;
 	color: white;
 }
+
+
+main img{
+	border-radius: 10px;
+} 
+
+
+
 
 a.skip{
   left: 0;
@@ -24,7 +32,14 @@ a.skip:focus{
     text-decoration-style: solid;
 }
 
-p, h1, h2 {
+p{
+	padding: 10px 0px;
+}
+.back p{
+	display: none;
+}
+
+h1, h2 {
     padding: 15px;
 	text-align: center;
 }
@@ -44,6 +59,7 @@ h2{
 h3{
 	font-weight: 500;
 }
+
 p{
 	font-weight: 300;
 }
@@ -109,19 +125,24 @@ nav ul li,#nav_checkbox{
 
 
 
-main img{
-	display: block;
-    margin-left: auto;
-	margin-right: auto;
-	margin-top: 20px;
-	border-radius: 10px;
-	width: 85%;
-	align-self: center;
-} 
+
+.cook img, .travel img{
+	animation-duration:5s;
+	animation-name: in;
+}
+
+@keyframes in {
+	from {
+	  opacity:  1%;
+	}
+	to {
+		opacity:  100%;
+	}
+}
+
 
 
 .project p{
-	padding-left: 35px;
 	text-align: left;
 }
 
@@ -136,9 +157,19 @@ main img{
 	grid-template-rows: repeat(2,auto);
 	align-items: center;
 	row-gap: 40px;
+	animation-duration: 1s;
+  	animation-name: slidein;
 }
 
-
+@keyframes slidein {
+	from {
+	  margin-left: 100%;
+	}
+  
+	to {
+	  margin-left: 0%;
+	}
+}
 
 .form{
 	background-color: white;
@@ -150,9 +181,9 @@ footer{
 	text-align: center;
 }
 
-form{
+/* form{
 	margin: 20px;
-}
+} */
 form p{
 	text-align: left;
 	font-weight: 300;
@@ -163,28 +194,35 @@ label{
   }
 
 fieldset{
-	width: 95%;
+	width: 100%;
 	margin: auto;
 }
 input {
 	width: 100%;
 	padding: 12px 30px;
+	margin: 5px 0px;
 	display: inline-block;
 	font-family: "Poppins";
 	font-weight: 300;
 	font-size: 0.75em;
 }
 
+
 input[type=submit]:hover {
 	opacity: 0.8;
   }
 
+.parallax {
+	background-image: url("../imgs/mountain.png");
+	min-height: 300px; 
+	width: 100%;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
-
-
-/*Added this so the links stay the same color*/
-
-@media screen and (min-width: 850px){
+@media screen and (min-width: 750px){
 	body{
 		margin-left:10%;
 		margin-right:10%;
@@ -196,7 +234,7 @@ input[type=submit]:hover {
 		display: flex;
 		flex-direction: row ;
 		align-items: center;
-		gap: 2rem;
+		gap: 4rem;
 		margin: 1rem;
 		font-size:1 em;
 	}
@@ -205,9 +243,110 @@ input[type=submit]:hover {
 		display: block;
 		font-size: 1em;
 	} 
+
+	nav ul li:nth-child(2){
+		display: none;
+	} 
+
 	#nav_checkbox, .nav_toggle{
 		display: none;
 		font-size: 20px;
+	}
+
+
+	.cook{
+		margin: 20px 0px;
+		display: grid;
+		grid-template-rows: auto;
+		align-items: center;
+		column-gap: 10%;
+	}
+
+	.cook img{
+		width: 22%;
+	}
+	.cook img:hover{
+		width: 30%;
+	}
+
+
+	.dishes{
+		display: flex;
+		flex-flow: row wrap;
+		gap: 1rem;
+	}
+	.travel{
+		margin: 50px 0px;
+		display: grid;
+		grid-template-rows: auto;
+		align-items: center;
+		column-gap: 10%;
+	}
+
+	.travel img{
+		width: 22%;
+	}
+	.travel img:hover{
+		width: 30%;
+	}
+
+	.cities{
+		display: flex;
+		flex-flow: row wrap;
+		gap: 1rem;
+	}
+} 
+
+
+
+
+@media screen and (min-width: 1100px){
+	.back p{
+		display: block;
+	}
+
+	.flip_card{
+		width: 100%;
+		max-height: 100%;
+		perspective: 1000px;
+	}
+	
+	.card {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		text-align: center;
+		transition: transform 1s;
+		transform-style: preserve-3d;
+	}
+	
+	.front {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		backface-visibility: hidden;
+	}
+	
+	.flip-card:hover .card {
+		transform: rotateY(180deg);
+	}
+	
+	.front, .back {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		-webkit-backface-visibility: hidden; /* Safari */
+		backface-visibility: hidden;
+	}
+	
+	.back {
+		background-color: orange;
+		color: white;
+		transform: rotateY(180deg);
+	}
+
+	nav ul li:nth-child(2){
+		display: block;
 	} 
 
 	
@@ -246,22 +385,56 @@ input[type=submit]:hover {
 	.project{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: auto;
+		grid-template-rows: 250px 1fr 250px 1fr;
+		
+		column-gap: 1rem;
+		column-gap: 1rem;
 		margin-top: 50px;
 		margin-bottom: 50px;
 	}
 
-	#polaris{
-		grid-column: 1/ span 1;
+	#polaris-pic{
+		overflow: hidden;
+		grid-column: 1 / span 1;
 		grid-row: 1 / span 1;
-	} 
-	#va{
+	}
+
+	#polaris{
+		grid-column: 1 / span 1;
+		grid-row: 2 / span 1;
+	}
+	
+	#va-pic{
+		overflow: hidden;
 		grid-column: 2 / span 1;
 		grid-row: 1 / span 1;
 	}
-	#simon{
-		grid-column: 1/ span 1;
+
+	#va{
+		grid-column: 2 / span 1;
 		grid-row: 2 / span 1;
+	}
+
+	#simon-pic{
+		overflow: hidden;
+		grid-column: 1 / span 1;
+		grid-row: 3 / span 1;
+	}
+
+	#simon{
+		grid-column: 1 / span 1;
+		grid-row: 4 / span 1;
+	}
+
+	#vis-pic{
+		overflow: hidden;
+		grid-column: 2/ span 1;
+		grid-row: 3 / span 1;
+	}
+
+	#vis{
+		grid-column: 2 / span 1;
+		grid-row: 4 / span 1;
 	}
 	
 	
@@ -368,6 +541,9 @@ input[type=submit]:hover {
 		column-gap: 10%;
 	}
 
+	.traveltext{
+		grid-area: 2 / 3 / 1 / 2 ;
+	}
 	.travel img{
 		width: 30%;
 	}
@@ -381,4 +557,3 @@ input[type=submit]:hover {
 	
 
 }
-
