@@ -402,7 +402,7 @@ input[type=submit]:hover {
 		align-items: flex-start;
 		background-color: #ff5e69;
 		background-size: 80%;
-		background-image: -webkit-linear-gradient(45deg,#b16cea, #ff5e69, #ff8a56,#ffa84b);
+		background-image: -webkit-linear-gradient(45deg,#d39dff, #ffa7ad, #fabda2,#ffe7cd);
   		-webkit-background-clip: text;
   		-webkit-text-fill-color: transparent;
 	}
