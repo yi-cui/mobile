@@ -37,9 +37,8 @@ a.skip:focus{
 p{
 	padding: 10px 0px;
 }
-.back p{
-	display: none;
-}
+
+
 
 h1, h2 {
     padding: 15px;
@@ -71,69 +70,6 @@ a{
 	text-decoration: none;
 }
 
-nav ul{
-	display: flex;
-	flex-direction: column ;
-	align-items: center;
-	gap: 2rem;
-	margin: 1rem;
-	font-size: 0.8em;
-}
-
-nav li:first-child{
-	margin-right: auto;
-	display: block;
-	font-size: 1.2em;
-	font-weight: 600;
-	border-bottom: 6px solid rgb(255, 169, 58);
-	padding-bottom: -12px;
-}
-
-header .current {
-	color: white;
-	text-decoration: underline;
-	font-weight: 600;
-	text-transform:uppercase;
-}
-
-nav ul li,#nav_checkbox{
-	display: none;
-	font-size: 20px;
-} 
-
-.nav_toggle{
-	position: absolute;
-	right: 0;
-	width: 40px;
-	margin: 0rem 1rem;
-}
-
-
-#close{
-	display: none;
-	width: 80%;
-}
-
-
-#nav_checkbox:checked ~ ul li{
-	display: block;
-}
-
-#nav_checkbox:checked ~ label img#close{
-	display: block;
-}
-#nav_checkbox:checked ~ label img#menu{
-	display: none;
-}
-
-
-
-
-.cook img, .travel img, .project img{
-	animation-duration:5s;
-	animation-name: fadein;
-}
-
 
 
 @keyframes fadein {
@@ -147,9 +83,7 @@ nav ul li,#nav_checkbox{
 
 
 
-.project p{
-	text-align: left;
-}
+
 
 .videos-intro{
 	border: solid 1px white;
@@ -176,9 +110,7 @@ nav ul li,#nav_checkbox{
 	}
 }
 
-.form{
-	background-color: white;
-}
+
 
 footer{
 	margin-top: 50px;
@@ -186,46 +118,8 @@ footer{
 	text-align: center;
 }
 
-/* form{
-	margin: 20px;
-} */
-form p{
-	text-align: left;
-	font-weight: 300;
-}
-
-label{
-	display: inline-block;
-  }
-
-fieldset{
-	width: 100%;
-	margin: auto;
-}
-input {
-	width: 100%;
-	padding: 12px 30px;
-	margin: 5px 0px;
-	display: inline-block;
-	font-family: "Poppins";
-	font-weight: 300;
-	font-size: 0.75em;
-}
 
 
-input[type=submit]:hover {
-	opacity: 0.8;
-  }
-
-.parallax {
-	background-image: url("../imgs/mountain.png");
-	min-height: 300px; 
-	width: 100%;
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
 
 @media screen and (min-width: 768px){
 	body{
@@ -235,76 +129,7 @@ input[type=submit]:hover {
 		background-color: black;
 		color:white;
 	}
-	nav ul{
-		display: flex;
-		flex-direction: row ;
-		align-items: center;
-		gap: 4rem;
-		margin: 1rem;
-		font-size:1 em;
-	}
-
-	nav ul li{
-		display: block;
-		font-size: 1em;
-	} 
-
-	nav ul li:nth-child(2){
-		display: none;
-	} 
-
-	#nav_checkbox, .nav_toggle{
-		display: none;
-		font-size: 20px;
-	}
-
-
-	.cook{
-		margin: 20px 0px;
-		display: grid;
-		grid-template-rows: auto;
-		align-items: center;
-		column-gap: 10%;
-	}
-
-	.cook img{
-		width: 100px;
-		flex-shrink:0;
-	}
-	.cook img:hover{
-		width: 120px;
-	}
-
-
-	.dishes{
-		display: flex;
-		flex-flow: row wrap;
-		gap: 1rem;
-		justify-content:center;
-
-	}
 	
-	.travel{
-		margin: 50px 0px;
-		display: grid;
-		grid-template-rows: auto;
-		align-items: center;
-		column-gap: 10%;
-	}
-
-	.travel img{
-		width: 120px;
-	}
-	.travel img:hover{
-		width: 150px;
-	}
-
-	.cities{
-		display: flex;
-		flex-flow: row wrap;
-		gap: 1rem;
-		justify-content:center;
-	}
 	.petintro{
 		display: grid;
 		margin: 50px 0px;
@@ -326,246 +151,3 @@ input[type=submit]:hover {
 		width: 300px;
 	}
 } 
-
-
-
-
-@media screen and (min-width: 1024px){
-	.back p{
-		display: block;
-		text-align: center;
-		margin: auto;
-	}
-	
-
-	.flip-card{
-		width: 100%;
-		max-height: 100%;
-		perspective: 1000px;
-	}
-	
-	.card {
-		width: 100%;
-		height: 100%;
-		position: relative;
-		text-align: center;
-		transition: transform 1s;
-		transform-style: preserve-3d;
-	}
-	
-	.front {
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		backface-visibility: hidden;
-	}
-	
-	.flip-card:hover .card,
-	.project a:focus .card {
-		transform: rotateY(180deg);
-
-	}
-	
-	.front, .back {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		-webkit-backface-visibility: hidden; /* Safari */
-		backface-visibility: hidden;
-	}
-	
-	.back {
-		border-radius: 10px;
-		background-color: rgb(206, 206, 206,0.2);
-		color: white;
-		padding: 80px 20px;
-		transform: rotateY(180deg);
-	}
-
-	nav ul li:nth-child(2){
-		display: block;
-	} 
-
-	
-
-	.title{
-		margin: 30px 0px;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		column-gap: 2rem;
-		grid-template-rows: auto;
-		justify-items: start;
-	}
-	#hey{
-		grid-column: 1/ span 1;
-		grid-row: 1 / span 1;
-		align-items: flex-start;
-		background-color: #ff5e69;
-		background-size: 80%;
-		background-image: -webkit-linear-gradient(45deg,#d39dff, #ffa7ad, #fabda2,#ffe7cd);
-  		-webkit-background-clip: text;
-  		-webkit-text-fill-color: transparent;
-	}
-
-	#name{
-		grid-column: 1/ span 1;
-		grid-row: 2 / span 1;
-	}
-	#intro{
-		grid-column: 2/ span 1;
-		grid-row: 1 / span 2;
-		justify-items: center;
-		align-items: center;
-	}
-
-
-	.project{
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 250px 1fr 250px 1fr;
-		column-gap: 1rem;
-		column-gap: 1rem;
-		margin-top: 50px;
-		margin-bottom: 50px;
-	}
-
-	#polaris-pic{
-		overflow: hidden;
-		grid-column: 1 / span 1;
-		grid-row: 1 / span 1;
-	}
-
-	#polaris{
-		grid-column: 1 / span 1;
-		grid-row: 2 / span 1;
-	}
-	
-	#va-pic{
-		overflow: hidden;
-		grid-column: 2 / span 1;
-		grid-row: 1 / span 1;
-	}
-
-	#va{
-		grid-column: 2 / span 1;
-		grid-row: 2 / span 1;
-	}
-
-	#simon-pic{
-		overflow: hidden;
-		grid-column: 1 / span 1;
-		grid-row: 3 / span 1;
-	}
-
-	#simon{
-		grid-column: 1 / span 1;
-		grid-row: 4 / span 1;
-	}
-
-	#vis-pic{
-		overflow: hidden;
-		grid-column: 2/ span 1;
-		grid-row: 3 / span 1;
-	}
-
-	#vis{
-		grid-column: 2 / span 1;
-		grid-row: 4 / span 1;
-	}
-	
-	
-	
-	
-	label{
-		display: inline-block;
-		width:15%;
-	}
-
-	input {
-		width: 84%;
-		padding: 12px 20px;
-		margin: 10px 0;
-		display: inline-block;
-		box-sizing: border-box;
-	}
-
-	input[type=submit] {
-		width: 100%;
-	}
-
-	input[type=submit]:hover {
-		opacity: 0.8;
-	}
-	
-
-
-
-
-/* The about me page */
-	#know{
-		margin: 50px 0px;
-	}
-	.aboutme{
-		display: grid;
-		margin: 20px 0px;
-		grid-template-columns:1fr 1fr ;
-		grid-template-rows:auto;
-		column-gap: 4rem;
-
-
-	}
-
-
-	#introduce{
-		grid-area: 2/3/1/2;
-		align-self: center;
-	}
-	.aboutme a{
-		color:white;
-		text-decoration: underline;
-	}
-
-
-	
-	
-/* The gallery page */
-	.cook{
-		margin: 50px 0px;
-		display: grid;
-		grid-template-columns: 1fr 1.2fr;
-		grid-template-rows: auto;
-		align-items: center;
-		column-gap: 10%;
-	}
-
-	
-
-	.travel{
-		margin: 100px 0px;
-		display: grid;
-		grid-template-columns: 1.2fr 1fr;
-		grid-template-rows: auto;
-		align-items: center;
-		column-gap: 10%;
-	}
-
-	.traveltext{
-		grid-area: 2 / 3 / 1 / 2 ;
-	}
-}
-
-@media (prefers-reduced-motion) {
-	.cook img, .travel img {
-	  animation-name: fadein;
-	}
-	.picture {
-		animation-name: sidein;
-	  }
-
-	.parallax {
-		background-attachment:scroll;
-	}
-	.flip-card:hover .card {
-		transform: none;
-	}
-  }
